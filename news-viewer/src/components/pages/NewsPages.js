@@ -14,4 +14,4 @@ const NewsPage = ({match}) => {
     );
 };
 
-eoxport default NewsPage;
+export default NewsPage;
