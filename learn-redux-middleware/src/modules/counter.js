@@ -6,7 +6,19 @@ const DECREASE = 'counter/DECREASE';
 export const increase = createAction(INCREASE);
 export const decrease = createAction(DECREASE);
 
-const initialState = 0;
+export const increaseAsync = () => dispatch => {
+    setTimeout(() => {
+        dispatch(increase());
+    }, 1000);
+};
+
+export const decreaseAsync = () => dispatch => {
+    setTimeout(() => {
+        dispatch(decrease());
+    }, 1000);
+};
+
+const initialState = 0; //상체는 무조건 객체일 필요가 없음
 
 const counter = handleActions(
     {
