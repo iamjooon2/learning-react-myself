@@ -1,5 +1,31 @@
 {
   "dependencies": {
+    "eslint-config-prettier": "^7.2.0",
+    "koa": "^2.13.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-actions": "^2.6.5",
     "styled-components": "^5.2.1"
-  }
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0"
+  },
+  "name": "learning-react-myself",
+  "description": "벨로퍼트님의 『리액트를 다루는 기술』을 보며 공부한 내용을 기록합니다.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junheeyeap/learning-react-myself.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junheeyeap/learning-react-myself/issues"
+  },
+  "homepage": "https://github.com/junheeyeap/learning-react-myself#readme"
 }

@@ -24,7 +24,6 @@ export default connect(
         loadingUsers : sample.loading.GET_USERS
     }),
     {
-        getPost,
-        getUsers
+        getPost,getUsers
     }
 )(SampleContainer);

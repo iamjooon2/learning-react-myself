@@ -1,3 +1,4 @@
+import { zipWith } from 'lodash';
 import React from 'react';
 import {Route} from 'react-router-dom';
 import NewsPage from './pages/NewsPage';
