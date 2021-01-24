@@ -7,7 +7,7 @@ import createRequestThunk from '../lib/createRequestThunk';
 
 const GET_POST = 'sample/GET_POST';
 const GET_POST_SUCCESS = 'sample/GET_POST_SUCCESS';
-const GET_POST_FAILURE = 'sample/GET_POST_FAILURE';
+const GET_POST_FAILURE = 'sample/GET_POST_FAILURE'; 
 
 const GET_USERS = 'sample/GET_USERS';
 const GET_USERS_SUCCESS = 'sample/GET_USER_SUCCESS';
@@ -18,7 +18,6 @@ const GET_USERS_FAILURE = 'sample/GET_USER_FAILURE';
 
 export const getPost = createRequestThunk(GET_POST, api.getPost);
 export const getUsers = createRequestThunk(GET_USERS, api.getUsers);
-
 
 //초기상태 선언
 //요청의 로딩 중 상태는 loading이라는 객체에서 관리
@@ -32,7 +31,7 @@ const initialState = {
     users : null
 };
 
-const sample  = handleActions(
+const samples  = handleActions(
     {
         [GET_POST] : state => ({
             ...state,
@@ -81,4 +80,4 @@ const sample  = handleActions(
     initialState
 );
 
-export default sample;
+export default samples;
