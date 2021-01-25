@@ -1,10 +1,22 @@
-const Koa = require('Koa');
+const Koa =require('koa');
 
 const app = new Koa();
-app.use(ctx => {
-    ctx.body = 'hello, world!';
+
+app.use ((ctx, next)=> {
+    console.log(ctx.url);
+    console.log(1);
+    next();
 });
 
-app.listen(4000, () => {
-    console.log('Listening to port 4000');
-});
+app.use((ctx, next) => {
+    console.log(2);
+    next();
+})
+
+app.use(ctx=>{
+    ctx.body = 'ㅎㅇ';
+})
+
+app.listen(4000, ()=> {
+    console.log('4000번으로 붙고있띠');
+})
