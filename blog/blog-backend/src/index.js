@@ -1,22 +1,5 @@
-const Koa =require('koa');
+// 이 파일에서만 no-global-assign ESLint 옵션을 비활성화합니다
+/* eslint-disable no-global-assign */
 
-const app = new Koa();
-
-app.use ((ctx, next)=> {
-    console.log(ctx.url);
-    console.log(1);
-    next();
-});
-
-app.use((ctx, next) => {
-    console.log(2);
-    next();
-})
-
-app.use(ctx=>{
-    ctx.body = 'ㅎㅇ';
-})
-
-app.listen(4000, ()=> {
-    console.log('4000번으로 붙고있띠');
-})
+require = require('esm')(module /*, options*/);
+module.exports = require('./main.js');
