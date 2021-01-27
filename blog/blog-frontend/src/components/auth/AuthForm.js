@@ -12,7 +12,8 @@ const AuthFormBlock = styled.div`
     h3{
         margin : 0;
         color: ${palette.gray[8]};
-        margin-bottom : 1rem; 
+        margin-bottom : 1rem;
+        border-radius : 4px;
     }
 `;
 
@@ -51,10 +52,16 @@ const ButtonWithMarginTop = styled(Button)`
 margin-top: 1rem;
 `;
 
-const AuthForm = () => {
+const textMap = {
+    login : '로그인',
+    register : '회원가입',
+};
+
+const AuthForm = ({type}) => {
+    const text = textMap[type];
     return (
         <AuthFormBlock>
-            <h3>문예장착단</h3>
+            <h3>{text}</h3>
             <form>
                 <StyledInput autoComplete="username" name="username" placeholder="아이디" />
                 <StyledInput
@@ -63,10 +70,20 @@ const AuthForm = () => {
                 placeholder = "비밀번호"
                 type = "password"
                 />
-                <ButtonWithMarginTop cyan fullWidth> 로그인 </ButtonWithMarginTop>
+                {type === 'register' && (
+                    <StyledInput
+                    autoComplete = 'new-password'
+                    name="passwordConfirm"
+                    placeholder = "비밀번호 확인"
+                    type = "password"
+                    />
+                )}
+                <ButtonWithMarginTop cyan fullWidth> {text} </ButtonWithMarginTop>
             </form>
             <Footer>
-                <Link to ="/register">회원가입</Link>
+                {type === 'login' ? (
+                    <Link to ="/register"> 회원가입 </Link>
+                    ): ( <Link to= "/login">로그인</Link>)}
             </Footer>
         </AuthFormBlock>
     );
