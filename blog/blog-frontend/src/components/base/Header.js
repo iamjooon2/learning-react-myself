@@ -6,7 +6,6 @@ const HeaderBlock = styled.div``;
 const Header = () => {
     return (
         <HeaderBlock>
-            
         </HeaderBlock>
     );
 };

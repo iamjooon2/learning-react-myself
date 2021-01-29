@@ -13,7 +13,6 @@ const AuthFormBlock = styled.div`
         margin : 0;
         color: ${palette.gray[8]};
         margin-bottom : 1rem;
-        border-radius : 4px;
     }
 `;
 
